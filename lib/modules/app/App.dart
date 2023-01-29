@@ -15,9 +15,9 @@ class App extends StatelessWidget {
       home: BlocBuilder<AppBloc, AppState>(
         builder: (context, AppState state) {
           return state.when(
-            init:   SplashPage() as Widget,
-            cameraMode: ((_) => const SplashPage()),
-            galleryMode: ((_) => const SplashPage()));
+              init: (() => const SplashPage()),
+              cameraMode: (() => const CameraScreen()),
+              galleryMode: (() => const SplashPage()));
         },
       ),
       theme: ThemeData.dark(useMaterial3: true),

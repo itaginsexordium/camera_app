@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'modules/app/App.dart';
 
 Future<void> main() async {
+
+  
   MultiRepositoryProvider provider = AppProvider.init(App());
   runApp(provider);
 }
